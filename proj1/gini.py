@@ -24,15 +24,15 @@ def gini_normalized(actual, pred):
 
 
 def gini_visualization(actual, pred, graph = False):
-    gini_predictions = gini(actual, predictions)
+    gini_predictions = gini(actual, pred)
     gini_max = gini(actual, actual)
-    ngini= gini_normalized(actual, predictions)
+    ngini= gini_normalized(actual, pred)
     print('Gini: %.3f, Max. Gini: %.3f, Normalized Gini: %.3f' % (gini_predictions, gini_max, ngini))
     
     
     if(graph):
         # Sort the actual values by the predictions
-        data = zip(actual, predictions)
+        data = zip(actual, pred)
         sorted_data = sorted(data, key=lambda d: d[1])
         sorted_actual = [d[0] for d in sorted_data]
         # print('Sorted Actual Values', sorted_actual)
