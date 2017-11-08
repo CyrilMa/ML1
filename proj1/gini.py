@@ -45,5 +45,7 @@ def gini_visualization(actual, pred, graph = False):
         plt.xlabel('Cumulative Number of Predictions')
         plt.ylabel('Cumulative Actual Values')
         plt.show()
+    return(ngini)
+
     
     
