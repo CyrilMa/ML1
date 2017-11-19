@@ -7,8 +7,8 @@ import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 
 
 class DataSet:
-    train_data = pd.read_csv('data/train.csv')
-    test_data = pd.read_csv('data/test.csv')
+    train_data = pd.read_csv('data/train.csv',na_values="-1")
+    test_data = pd.read_csv('data/test.csv',na_values="-1")
     
     def __init__(self):
         return
